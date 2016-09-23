@@ -24,7 +24,7 @@ while true
 do
     TIME=`date +"%Y-%m-%d_%H:%M:%S"`
     cd $LOG_BASE
-    ls *.log
+    ls *.log > /dev/null
     if [ "$?" -ne 0 ]
     then
         echo "${TIME} Error: files not found! Retry after ${SLEEP_TIME} seconds..."
